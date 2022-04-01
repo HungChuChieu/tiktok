@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import MyState from './example/States';
+import Mount from './example/Mounted';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <MyState></MyState>
+    {/* <MyState></MyState> */}
+    <Mount></Mount>
   </React.StrictMode>,
   document.getElementById('root')
 );

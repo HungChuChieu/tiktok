@@ -22,4 +22,13 @@ function App() {
   );
 }
 
+// Bai tap todolist
+const TodoList =()=>{
+  return (
+    <div>
+      <input/>
+      <button>Nhập Todo</button>
+    </div>
+  )
+}
 export default App;

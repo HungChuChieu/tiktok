@@ -176,4 +176,34 @@ const TwoWayCheckBox = () => {
   );
 };
 
-export default TwoWayCheckBox;
+// Bai tap todolist
+const TodoList = () => {
+  const [todo, setTodo] = useState();
+  const [listTodo, setListTodo] = useState(() => {
+    const local = JSON.parse(localStorage.getItem("ListTodo"));
+
+    return local ?? [];
+  });
+  const handleNhap = () => {
+    setListTodo((prev) => {
+      const list = [...prev, todo];
+
+      localStorage.setItem("ListTodo", JSON.stringify(list));
+      return list;
+    });
+    setTodo("");
+  };
+  return (
+    <div style={{ padding: 10 }}>
+      <input value={todo} onChange={(e) => setTodo(e.target.value)} />
+      <button onClick={handleNhap}>Nhập Todo</button>
+      <ul>
+        {listTodo.map((t, index) => (
+          <li key={index}>{t}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default TodoList;

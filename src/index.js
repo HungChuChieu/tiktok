@@ -1,10 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import MyState from './example/States';
-import Mount from './example/Mounted';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import MyState from "./example/States";
+import Mount from "./example/Mounted";
+import reportWebVitals from "./reportWebVitals";
+
+function emitComment(id) {
+  setInterval(() => {
+    window.dispatchEvent(
+      new CustomEvent(`lession-${id}`, {
+        detail: `comment cua lesson-${id}`,
+      })
+    );
+  }, 2000);
+}
+
+emitComment(1);
+emitComment(2);
+emitComment(3);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,7 +26,7 @@ ReactDOM.render(
     {/* <MyState></MyState> */}
     <Mount></Mount>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

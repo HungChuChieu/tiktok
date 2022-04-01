@@ -193,4 +193,20 @@ const Resize = () => {
     </div>
   );
 };
-export default Resize;
+
+// countdown dung setInterval
+const CountDown = ()=>{
+    const [count, setCount] = useState(180);
+
+    useEffect(()=>{
+        setInterval(() => {
+            setCount(prev =>prev -1);
+        }, 1000);
+    },[])
+    return(
+        <div>
+            <h1>{count}</h1>
+        </div>
+    )
+}
+export default CountDown;

@@ -4,7 +4,11 @@ import "./index.css";
 import App from "./App";
 import MyState from "./example/States";
 import Mount from "./example/Mounted";
+import Count from "./example/Ref";
 import reportWebVitals from "./reportWebVitals";
+import CallBack from './example/CallBack';
+import MeMoo from './example/Memo';
+import Reducer from './example/Reducer';
 
 function emitComment(id) {
   setInterval(() => {
@@ -24,7 +28,11 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <MyState></MyState> */}
-    <Mount></Mount>
+    {/* <Mount></Mount> */}
+    {/* <Count></Count> */}
+    {/* <CallBack></CallBack> */}
+    {/* <MeMoo></MeMoo> */}
+    <Reducer></Reducer>
   </React.StrictMode>,
   document.getElementById("root")
 );

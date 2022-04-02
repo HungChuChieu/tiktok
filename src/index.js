@@ -6,9 +6,11 @@ import MyState from "./example/States";
 import Mount from "./example/Mounted";
 import Count from "./example/Ref";
 import reportWebVitals from "./reportWebVitals";
-import CallBack from './example/CallBack';
-import MeMoo from './example/Memo';
-import Reducer from './example/Reducer';
+import CallBack from "./example/CallBack";
+import MeMoo from "./example/Memo";
+import Reducer from "./example/Reducer";
+import MyReducer from "./example/MyReducer";
+import MyTodo from "./example/Todo/index";
 
 function emitComment(id) {
   setInterval(() => {
@@ -25,15 +27,15 @@ emitComment(2);
 emitComment(3);
 
 ReactDOM.render(
-  <React.StrictMode>
-    {/* <App /> */}
-    {/* <MyState></MyState> */}
-    {/* <Mount></Mount> */}
-    {/* <Count></Count> */}
-    {/* <CallBack></CallBack> */}
-    {/* <MeMoo></MeMoo> */}
-    <Reducer></Reducer>
-  </React.StrictMode>,
+  //  <App />
+  //  <MyState></MyState>
+  //  <Mount></Mount>
+  //  <Count></Count>
+  //  <CallBack></CallBack>
+  //  <MeMoo></MeMoo>
+  //  <Reducer></Reducer>
+  //  <MyReducer></MyReducer>
+  <MyTodo></MyTodo>,
   document.getElementById("root")
 );
 

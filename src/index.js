@@ -13,6 +13,10 @@ import MyReducer from "./example/MyReducer";
 import MyTodo from "./example/Todo/index";
 import MyContext from "./example/Context/index";
 import { ThemeProvider } from "./example/Context/ThemeContext";
+import MyGlobalState from "./example/MyGlobalState";
+import MyContextAndReducer from "./example/MyContextAndReducer";
+// import {StoreProvider} from "./example/Store";
+import { StoreProvider } from "./example/ContextAndReducer";
 
 function emitComment(id) {
   setInterval(() => {
@@ -37,9 +41,12 @@ ReactDOM.render(
   //  <MeMoo></MeMoo>
   //  <Reducer></Reducer>
   //  <MyReducer></MyReducer>
-  <ThemeProvider>
-    <MyContext/>
-  </ThemeProvider>,
+  // <ThemeProvider>
+  //   <MyContext/>
+  // </ThemeProvider>
+  <StoreProvider>
+    <MyContextAndReducer />
+  </StoreProvider>,
   document.getElementById("root")
 );
 

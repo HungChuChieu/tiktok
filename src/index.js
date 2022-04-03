@@ -17,6 +17,8 @@ import MyGlobalState from "./example/MyGlobalState";
 import MyContextAndReducer from "./example/MyContextAndReducer";
 // import {StoreProvider} from "./example/Store";
 import { StoreProvider } from "./example/ContextAndReducer";
+import MyInperial from './example/useImperial';
+import MyImpe from "./example/useImperial";
 
 function emitComment(id) {
   setInterval(() => {
@@ -44,9 +46,11 @@ ReactDOM.render(
   // <ThemeProvider>
   //   <MyContext/>
   // </ThemeProvider>
-  <StoreProvider>
-    <MyContextAndReducer />
-  </StoreProvider>,
+  // <StoreProvider>
+  //   <MyContextAndReducer />
+  // </StoreProvider>
+  <MyImpe/>
+  ,
   document.getElementById("root")
 );
 

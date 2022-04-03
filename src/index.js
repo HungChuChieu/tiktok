@@ -11,6 +11,8 @@ import MeMoo from "./example/Memo";
 import Reducer from "./example/Reducer";
 import MyReducer from "./example/MyReducer";
 import MyTodo from "./example/Todo/index";
+import MyContext from "./example/Context/index";
+import { ThemeProvider } from "./example/Context/ThemeContext";
 
 function emitComment(id) {
   setInterval(() => {
@@ -35,7 +37,9 @@ ReactDOM.render(
   //  <MeMoo></MeMoo>
   //  <Reducer></Reducer>
   //  <MyReducer></MyReducer>
-  <MyTodo></MyTodo>,
+  <ThemeProvider>
+    <MyContext/>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 
